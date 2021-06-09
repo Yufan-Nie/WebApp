@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>warnings</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>F:\WebApp\WebApp_webapi\WebApp_webapi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithm\Algorithm.csproj" />
+    <ProjectReference Include="..\WebApp_IService\WebApp_IService.csproj" />
+    <ProjectReference Include="..\WebApp_Models\WebApp_Models.csproj" />
+    <ProjectReference Include="..\WebApp_Service\WebApp_Service.csproj" />
+  </ItemGroup>
+
+
+</Project>

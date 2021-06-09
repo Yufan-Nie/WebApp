@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApp_webapi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApp_webapi.Controllers.WeatherForecastController.GetTable1">
+            <summary>
+            4、	使用webAPI构建一个后台服务，添加数据查询接口，对上述数据库中的表格进行查询，结果以json格式返回。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp_webapi.Controllers.WeatherForecastController.GetpointNumber(System.String)">
+            <summary>
+            (1)	构建一个get接口，url中参数为某一特定SubProject_Name，返回该SubProject_Name中所有的Survey_point_Number。（数据参考table1）
+            </summary>
+            <param name="SubProject_Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp_webapi.Controllers.WeatherForecastController.GetTime(WebApp_Models.TimeQuery)">
+            <summary>
+            (2)	构建一个post接口，传递参数为Survey_point_Number，startTime，endTime。其中Survey_point_Number为某一特定点号，startTime和endTime为起止时间，要求返回传入点号在起止时间之间的所有数据记录。（数据参考table2）
+            </summary>
+            <param name="timeQuery"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
