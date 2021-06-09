@@ -67,7 +67,7 @@ namespace WebApp_webapi.Controllers
         /// <param name="SubProject_Name"></param>
         /// <returns></returns>
         [HttpGet]
-        public object GetpointNumber(string SubProject_Name)
+        public List<string> GetpointNumber(string SubProject_Name)
         {
             var blogs = _testContext.Table1s
                 .Where(b => b.SubProjectName == SubProject_Name)
@@ -76,8 +76,12 @@ namespace WebApp_webapi.Controllers
                 })
                 .ToList();
             //遍历value
-
-            return blogs;
+            List<string> list = new List<string>();
+            for (int i = 0;i<blogs.Count;i++)
+            {
+                list.Add(blogs[i].Survey_point_Number);
+            }
+            return list;
         }
 
 
@@ -95,5 +99,24 @@ namespace WebApp_webapi.Controllers
             return blogs;
         }
 
+        /// <summary>
+        /// 取得的所有Survey_point_Number中的loadReading的最大值
+        /// </summary>
+        /// <param name="Survey_point_Number"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public double GetmaxloadReading(string Survey_point_Number)
+        {
+            var blogs = _testContext.Table2s
+                .Where(b => b.SurveyPointNumber == Survey_point_Number)
+                .ToList();
+            //遍历value
+            List<double> list = new List<double>();
+            for (int i = 0; i < blogs.Count; i++)
+            {
+                list.Add(blogs[i].LoadReading);
+            }
+            return list.Max();
+        }
     }
 }

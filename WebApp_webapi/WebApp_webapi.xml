@@ -24,5 +24,12 @@
             <param name="timeQuery"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApp_webapi.Controllers.WeatherForecastController.GetmaxloadReading(System.String)">
+            <summary>
+            取得的所有Survey_point_Number中的loadReading的最大值
+            </summary>
+            <param name="Survey_point_Number"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
